@@ -21,7 +21,7 @@ export default function LandingPage() {
         <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-screen'></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 sm:w-full flex items-center justify-center p-2">
+        <div className="md:w-1/2 sm:w-full h-screen flex items-center justify-center p-2 overflow-hidden">
           <img
             src={women}
             alt="women with pimple patches"
