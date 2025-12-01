@@ -3,15 +3,15 @@ export default function AboutComponent() {
     <div className="w-full min-h-screen bg-stone-300 flex justify-center items-center   font-roboto ">
       
       {/* MAIN CONTENT */}
-      <div className="relative bg-stone-300 w-full max-w-6xl m-4">
+      <div className="relative bg-stone-300 w-full max-w-6xl p-4 md:p-6">
 
         {/* Responsive Title */}
-        <h1 className="text-2xl md:text-4xl font-semibold text-[#004e7a] mb-4 md:mb-6 text-center">
+        <h1 className="text-2xl lg:text-4xl md:text-3xl  font-semibold text-[#004e7a] mb-4 md:mb-6 text-center">
           Our Story
         </h1>
         
         {/* Responsive Text */}
-        <p className="text-[#004e7a] leading-relaxed text-sm  md:text-xl space-y-4">
+        <p className="text-[#004e7a] leading-relaxed text-sm md:text-base lg:text-xl space-y-4">
 
           <span className="block mb-4">
             SpotCureX was created from something we all understand — the frustration of breakouts 
