@@ -21,15 +21,18 @@ export default function LandingPage() {
         <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-[850px]'></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-full flex items-center justify-center  overflow-hidden">
-          <img
-          width={800}
-          height={800}
-            src={women}
-            alt="women with pimple patches"
-            className="w-full h-full object-cover "
-          />
-        </div>
+       {/* IMAGE */}
+<div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden">
+  <img
+    width={800}
+    height={800}
+    src={women}
+    alt="women with pimple patches"
+    className="w-full h-full object-cover"
+    loading="eager"
+  />
+</div>
+
 
         {/* TEXT */}
         <div className="absolute inset-0  md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
