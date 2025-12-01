@@ -33,6 +33,7 @@ export default function LandingPage() {
 
         {/* TEXT RIGHT */}
         <div className="w-1/2 h-full relative flex flex-col justify-center p-8 z-20 text-white">
+          {/* Animate only text, not the image */}
           <motion.h1
             className="text-5xl mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -41,10 +42,15 @@ export default function LandingPage() {
           >
             Invisible Care, Visible Results
           </motion.h1>
-          <h2 className="text-xl leading-relaxed">
+          <motion.h2
+            className="text-xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce redness, protect active breakouts, and visibly speed up healing. Our patches combine clean hydrocolloid technology with effective actives — like tea tree, retinol, salicylic acid, centella, and more — to support every stage of your skin’s healing journey.  
             Invisible on the skin, powerful on blemishes, and gentle for everyday use.
-          </h2>
+          </motion.h2>
         </div>
 
       </section>
