@@ -17,15 +17,15 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full md:h-screen h-[400px]  bg-stone-600 relative">
-        <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-screen'></div>
+      <section className="w-full md:h-[850px] h-[400px]  bg-stone-600 relative border">
+        <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-[850px]'></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 sm:w-full h-screen flex items-center justify-center p-2 overflow-hidden">
+        <div className="md:w-1/2 w-[850px] h-[850px] flex items-center justify-center  overflow-hidden">
           <img
             src={women}
             alt="women with pimple patches"
-            className="w-full h-full object-cover md:object-contain"
+            className="w-[850px] h-[850px] object-cover border"
           />
         </div>
 
