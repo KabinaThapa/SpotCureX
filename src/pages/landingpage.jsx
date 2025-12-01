@@ -37,6 +37,7 @@ export default function LandingPage() {
         {/* TEXT */}
         <div className="absolute inset-0  md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
+          layout={false}
             className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,6 +47,7 @@ export default function LandingPage() {
           </motion.h1>
 
           <motion.p
+          layout={false}
             className="text-sm md:text-xl font-extralight leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
