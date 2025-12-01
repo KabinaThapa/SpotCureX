@@ -1,4 +1,3 @@
-// src/pages/landingpage.jsx
 import women from '../assets/women.png';
 import { motion } from "framer-motion";
 import Cards from '../components/cards';
@@ -12,9 +11,9 @@ import Footer from '../components/footer';
 export default function LandingPage() {
   return (
     <div className="bgbox w-full h-auto flex flex-col justify-between items-center bg-stone-200 font-roboto">
-
-      {/* Navbar */}
-      <div className="absolute w-full z-20">
+      
+      {/* NAVBAR */}
+      <div className='absolute w-full'>
         <Navbar />
       </div>
 
@@ -22,22 +21,19 @@ export default function LandingPage() {
       <div className="Header w-full flex relative bg-stone-500 h-screen">
 
         {/* Background overlay */}
-        <div className='absolute inset-0 bg-stone-900 opacity-50'></div>
+        <div className='bg-stone-900 backdrop-blur-3xl opacity-50 absolute top-0 left-0 w-full h-full z-0'></div>
 
-        {/* LEFT IMAGE (STATIC) */}
-        <div className="w-1/2 h-full flex items-center justify-center">
-          <img 
-            src={women} 
-            alt='women with pimple patches' 
-            className='w-full h-full object-contain'
-            width={600} 
-            height={800} 
-            loading="eager"
+        {/* Left image */}
+        <div className="w-1/2 h-full relative overflow-hidden">
+          <img
+            src={women}
+            alt='women with pimple patches'
+            className='absolute top-0 left-0 w-full h-full object-cover'
           />
         </div>
 
-        {/* RIGHT TEXT */}
-        <div className="w-1/2 flex flex-col justify-center absolute top-[45%] left-[38%] p-2 text-white backdrop-blur-lg z-10">
+        {/* Right text */}
+        <div className="w-1/2 h-full absolute top-1/2 left-[38%] transform -translate-y-1/2 flex flex-col justify-center p-4  text-white z-10">
           <motion.h1
             className="text-5xl mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -46,20 +42,17 @@ export default function LandingPage() {
           >
             Invisible Care, Visible Results
           </motion.h1>
-          <motion.h2
-            className="text-xl leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce redness, protect active breakouts, and visibly speed up healing. Our patches combine clean hydrocolloid technology with effective actives — like tea tree, retinol, salicylic acid, centella, and more — to support every stage of your skin’s healing journey. Invisible on the skin, powerful on blemishes, and gentle for everyday use.
-          </motion.h2>
+          <h2 className="text-xl leading-relaxed">
+            SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce redness, protect active breakouts, and visibly speed up healing. Our patches combine clean hydrocolloid technology with effective actives — like tea tree, retinol, salicylic acid, centella, and more — to support every stage of your skin’s healing journey.  
+            Invisible on the skin, powerful on blemishes, and gentle for everyday use.
+          </h2>
         </div>
+
       </div>
 
       {/* CARDS SECTION */}
       <div className="h-auto w-full bg-stone-500 relative">
-        <div className='bg-stone-900 backdrop-blur-3xl opacity-50 w-full absolute h-[1137px]'></div>
+        <div className='bg-stone-900 backdrop-blur-3xl opacity-50 w-full absolute top-0 h-[1137px]'></div>
         <Cards />
       </div>
 
@@ -73,7 +66,7 @@ export default function LandingPage() {
         <ProductsComponents />
       </div>
 
-      {/* REVIEWS / CUSTOMER STORIES */}
+      {/* REVIEWS SECTION */}
       <div className="h-auto w-full">
         <Reviews />
       </div>
