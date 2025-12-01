@@ -54,7 +54,7 @@ export default function MasonrySections() {
         {cards.map((card, i) => (
           <motion.div
             key={i}
-            className={`break-inside-avoid bg-stone-200 p-6 text-[#004e7a] rounded-sm shadow-lg border flex flex-col justify-center`}
+            className={`break-inside-avoid bg-stone-100 p-6 text-[#004e7a] rounded-sm shadow-lg  flex flex-col justify-center`}
             style={{ height: `${card.height}px` }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
