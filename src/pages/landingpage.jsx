@@ -17,29 +17,28 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full md:h-[850px] h-[500px] bg-stone-600 relative flex items-center border border-amber-400">
-        
-        {/* Dark overlay */}
-        <div className='md:bg-stone-900/40 absolute top-0 left-0 w-full h-full pointer-events-none'></div>
+      <section className="w-full md:h-[850px] h-[500px]  bg-stone-600 relative  flex items-center ">
+        <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-[850px]'></div>
 
-        {/* IMAGE */}
-        <div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden">
-          <img
-            src={women}
-            alt="women with pimple patches"
-            width={1024}
-            height={1536}
-            className="w-full h-full object-contain"
-            loading="eager"
-            draggable={false}
-            style={{ maxWidth: '100%', maxHeight: '100%' }}
-          />
-        </div>
+        
+       {/* IMAGE */}
+<div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden">
+  <img
+    src={women}
+    alt="women with pimple patches"
+    width={1024}          // intrinsic width
+    height={1536}         // intrinsic height
+    className="w-full h-full md:object-contain object-cover"
+    loading="lazy"       // ensures image loads immediately
+    style={{ aspectRatio: "1024/1536" }} // reserve correct space
+  />
+</div>
+
 
         {/* TEXT */}
-        <div className="absolute md:top-1/3 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
+        <div className="absolute inset-0 border  md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
-            layout={false}
+          layout={false}
             className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,7 +48,7 @@ export default function LandingPage() {
           </motion.h1>
 
           <motion.p
-            layout={false}
+          layout={false}
             className="text-sm md:text-xl font-extralight leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
