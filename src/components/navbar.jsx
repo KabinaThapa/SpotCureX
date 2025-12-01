@@ -1,25 +1,24 @@
-import React from "react"
-import { FaInstagram, FaFacebookF, FaTiktok } from 'react-icons/fa'
+import React from "react";
+import { FaInstagram, FaFacebookF, FaTiktok } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
-    <div className="p-10 font-extrabold font-roboto flex justify-between items-center text-white overflow-hidden w-full">
+    <div className="fixed top-0 left-0 w-full p-4 sm:p-6 font-extrabold font-roboto flex justify-between items-center text-white  z-50">
       
       {/* LOGO OR BRAND NAME */}
-      <div className="flex items-center gap-2 relative z-10">
-        <h1 className="text-4xl">SpotCureX.</h1>
+      <div className="flex items-center gap-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl">SpotCureX.</h1>
       </div>
 
       {/* SOCIAL ICONS */}
-      <div className="flex items-center gap-6 relative z-10 text-3xl">
+      <div className="flex items-center gap-4 sm:gap-6 text-xl sm:text-2xl md:text-3xl">
         <a 
           href="https://www.facebook.com/share/1HFSggKVtx/?mibextid=wwXIfr" 
           target="_blank" 
           rel="noopener noreferrer"
           className="hover:opacity-70"
         >
-           <FaFacebookF />
-        
+          <FaFacebookF />
         </a>
 
         <a 
@@ -37,11 +36,9 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="hover:opacity-70"
         >
-         
-            <FaInstagram />
+          <FaInstagram />
         </a>
       </div>
-
     </div>
-  )
+  );
 }
