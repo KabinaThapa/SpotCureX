@@ -17,24 +17,21 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full">
-        {/* Hero container with fixed aspect ratio */}
-        <div className="relative w-full h-[500px] md:h-[850px] overflow-hidden bg-stone-600">
-          
-          {/* Semi-transparent overlay for desktop */}
+      <section className="w-full">
+        <div className="relative w-full aspect-[2/3] md:aspect-[3/2] bg-stone-600 overflow-hidden">
+
+          {/* OVERLAY (desktop only) */}
           <div className="hidden md:block absolute inset-0 bg-stone-900/40 z-10" />
 
           {/* IMAGE */}
-          <div className="w-full h-full relative">
-            <img
-              src={women}
-              alt="women with pimple patches"
-              className="w-full h-full md:object-contain object-cover"
-              width={1024} 
-              height={1536} 
-              loading="eager"
-            />
-          </div>
+          <img
+            src={women}
+            alt="women with pimple patches"
+            className="absolute inset-0 w-full h-full object-cover md:object-contain"
+            width={1024}
+            height={1536}
+            loading="eager"
+          />
 
           {/* TEXT */}
           <div className="absolute inset-0 md:inset-auto md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-6 md:p-8 z-20">
@@ -59,6 +56,7 @@ export default function LandingPage() {
               salicylic acid, centella, and more.
             </motion.p>
           </div>
+
         </div>
       </section>
 
