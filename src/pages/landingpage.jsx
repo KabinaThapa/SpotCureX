@@ -19,6 +19,9 @@ export default function LandingPage() {
       {/* HERO SECTION */}
       <section className="w-full bg-stone-600 relative flex items-center">
 
+        {/* FULL HERO DARK OVERLAY */}
+        <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
+
         {/* IMAGE */}
         <div className="md:w-1/2 w-full flex items-center justify-center overflow-hidden">
           <div className="w-full h-full relative" style={{ aspectRatio: "1024/1536" }}>
@@ -29,16 +32,14 @@ export default function LandingPage() {
               loading="eager"
               draggable={false}
             />
-            {/* DARK OVERLAY */}
-            <div className='absolute top-0 left-0 w-full h-full md:bg-stone-900/40 pointer-events-none'></div>
           </div>
         </div>
 
         {/* TEXT */}
-        <div className="absolute md:top-1/3 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
+        <div className="absolute z-20 md:top-1/3 md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
             layout={false}
-            className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
+            className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -48,7 +49,7 @@ export default function LandingPage() {
 
           <motion.p
             layout={false}
-            className="text-sm md:text-xl font-extralight leading-relaxed"
+            className="text-sm md:text-base lg:text-xl font-extralight leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}

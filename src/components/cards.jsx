@@ -17,7 +17,7 @@ export default function MasonrySections() {
       </p>
 
       {/* RESPONSIVE MASONRY SYSTEM */}
-      <div className="columns-1 lg:columns-3 gap-4 w-[90%] md:w-[80%] mx-auto space-y-4">
+      <div className="columns-1 lg:columns-3 md:columns-2  gap-2 w-[90%] md:w-[80%] lg:w-[80%] mx-auto space-y-4">
 
         {/* CARD 1 — YOU CAN EDIT HEIGHT HERE */}
         <motion.div
@@ -71,10 +71,11 @@ export default function MasonrySections() {
           className="
             break-inside-avoid bg-stone-100  p-6 rounded-sm shadow-md 
             text-[#004e7a] flex flex-col justify-center
-            
+            md:w-[615px]
+            lg:w-full
             min-h-[200px]
-           
-            md:min-h-[615px]
+           md:min-h-[200px]
+            lg:min-h-[615px]
           
           "
           initial={{ opacity: 0, y: 50 }}

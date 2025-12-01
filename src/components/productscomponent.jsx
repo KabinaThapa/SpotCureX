@@ -10,12 +10,12 @@ export default function ProductsComponents() {
     <div className="w-full bg-stone-200 p-4 md:p-12 font-roboto">
 
       {/* SECTION 1 — Hydrocolloid Patch with Split Background */}
-      <section className="relative  max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 
-      gap-10 py-6 md:py-20 min-h-[700px] md:h-[900px] bg-stone-100  items-center justify-center">
+      <section className="relative  max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 
+      gap-10 py-6 md:py-20 min-h-[700px] bg-stone-100  items-center justify-center">
 
         {/* LEFT — Sticky image with animation */}
         <motion.div
-          className="h-[40vh] w-[60%] md:w-[70%]  mx-auto md:h-[80vh] flex items-center justify-center z-10  rounded-sm shadow-md"
+          className="h-[40vh] w-[60%] md:w-full border mx-auto md:h-[80vh] flex items-center justify-center z-10  rounded-sm shadow-md"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function ProductsComponents() {
           <img
             src={teatreepatch}
             alt="Tea Tree Hydrocolloid Patch"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </motion.div>
 
@@ -32,7 +32,7 @@ export default function ProductsComponents() {
         <div className="space-y-6 relative z-10 text-[#004e7a] md:border-l-2 md:pl-4 p-4">
           <div>
             <h2 className="text-xl md:text-2xl font-semibold mb-1">Why Hydrocolloid?</h2>
-            <p className="leading-relaxed text-sm md:text-lg">
+            <p className="leading-relaxed text-sm md:text-base">
               Hydrocolloid works by absorbing excess oil, pus, and impurities from pimples 
               while creating a moist healing environment. It flattens whiteheads overnight, 
               prevents picking, and speeds up recovery.
@@ -41,7 +41,7 @@ export default function ProductsComponents() {
 
           <div>
             <h2 className="text-xl md:text-2xl font-semibold mb-1">Why Tea Tree?</h2>
-            <p className="leading-relaxed text-sm md:text-lg">
+            <p className="leading-relaxed text-sm md:text-base">
               Tea tree is naturally antibacterial, reduces redness, and calms inflamed skin. 
               Combined with hydrocolloid, it gives your breakout both healing and soothing benefits.
             </p>
@@ -49,7 +49,7 @@ export default function ProductsComponents() {
 
           <div>
             <h2 className="text-xl md:text-2xl font-semibold mb-1">How It Heals Your Skin</h2>
-            <p className="leading-relaxed text-sm md:text-lg">
+            <p className="leading-relaxed text-sm md:text-base">
               Our patches pull out impurities while protecting the spot from dirt and touching—
               allowing your skin to heal faster and more cleanly.
             </p>
@@ -57,7 +57,7 @@ export default function ProductsComponents() {
 
           <div>
             <h2 className="text-xl md:text-2xl font-semibold mb-1">Who Is It For?</h2>
-            <p className="leading-relaxed text-sm md:text-lg">
+            <p className="leading-relaxed text-sm md:text-base">
               Designed for whiteheads, hidden pimples, red bumps, sensitive skin, and anyone 
               trying to stop picking.
             </p>
@@ -65,7 +65,7 @@ export default function ProductsComponents() {
 
           <div>
             <h2 className="text-xl md:text-2xl font-semibold mb-1">What Makes Ours Different</h2>
-            <ul className="list-disc pl-6 space-y-2 text-sm md:text-lg">
+            <ul className="list-disc pl-6 space-y-2 text-sm md:text-base">
               <li>Thinner, stronger hydrocolloid</li>
               <li>Enhanced healing with pure tea tree extract</li>
               <li>Dermatologist-tested formula</li>
@@ -79,11 +79,11 @@ export default function ProductsComponents() {
       {/* SECTION 2 — Upcoming Patches */}
       <section className="py-10 sm:py-14 md:py-16">
         <div className="mx-auto px-2 max-w-7xl text-[#004e7a]">
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-10 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-10 text-center">
             Explore Our Upcoming Patches
           </h2>
 
-          <div className="columns-1 lg:columns-4 gap-6 space-y-6 md:w-full w-[90%] mx-auto">
+          <div className="columns-1 lg:columns-4 gap-6 space-y-6 md:w-full w-[90%] mx-auto border">
             {[
               {
                 name: "Hydrocolloid + Retinol",
@@ -108,12 +108,12 @@ export default function ProductsComponents() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="break-inside-avoid bg-stone-200  rounded-sm shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                className="break-inside-avoid bg-stone-200 border md:w-[60%] lg:w-full mx-auto  overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-[500px] object-cover object-center border-b"
+                  className="w-full h-[500px] md:h-[600px] md:w-full lg:w-full lg:h-[450px]  object-cover  rounded-sm shadow-md object-center border-b"
                 />
                 <div className="p-4 h-auto md:h-44 bg-white">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
