@@ -22,14 +22,15 @@ export default function LandingPage() {
 
         
        {/* IMAGE */}
-<div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden border">
+<div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden">
   <img
-    width={1024}      
-  height={1536} 
     src={women}
     alt="women with pimple patches"
+    width={1024}          // intrinsic width
+    height={1536}         // intrinsic height
     className="w-full h-full md:object-contain object-cover"
-    loading="eager"
+    loading="eager"       // ensures image loads immediately
+    style={{ aspectRatio: "1024/1536" }} // reserve correct space
   />
 </div>
 
