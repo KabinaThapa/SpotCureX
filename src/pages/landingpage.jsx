@@ -17,22 +17,24 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full md:h-[850px] h-[400px]  bg-stone-600 relative border">
+      <section className="w-full md:h-[850px] h-[500px]  bg-stone-600 relative ">
         <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-[850px]'></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-[850px] h-[850px] flex items-center justify-center  overflow-hidden">
+        <div className="md:w-1/2 w-full flex items-center justify-center  overflow-hidden">
           <img
+          width={800}
+          height={800}
             src={women}
             alt="women with pimple patches"
-            className="w-[850px] h-[850px] object-cover border"
+            className="w-full h-full object-cover "
           />
         </div>
 
         {/* TEXT */}
-        <div className="absolute inset-0 md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
+        <div className="absolute inset-0  md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
-            className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight "
+            className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
