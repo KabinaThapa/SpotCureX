@@ -17,48 +17,48 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full md:h-[850px] h-[500px]  bg-stone-600 relative border border-amber-400 flex items-center ">
-        <div className='md:bg-stone-900/40 md:absolute md:w-full md:h-[850px]'></div>
+      <section className="relative w-full">
+        {/* Hero container with fixed aspect ratio */}
+        <div className="relative w-full h-[500px] md:h-[850px] overflow-hidden bg-stone-600">
+          
+          {/* Semi-transparent overlay for desktop */}
+          <div className="hidden md:block absolute inset-0 bg-stone-900/40 z-10" />
 
-        
-       {/* IMAGE */}
-<div className="md:w-1/2 w-full h-[500px] md:h-[850px] flex items-center justify-center overflow-hidden">
-  <img
-    src={women}
-    alt="women with pimple patches"
-    width={1024}          // intrinsic width
-    height={1536}         // intrinsic height
-    className="w-full h-full md:object-contain object-cover"
-    loading="eager"       // ensures image loads immediately
-    style={{ aspectRatio: "1024/1536" }} // reserve correct space
-  />
-</div>
+          {/* IMAGE */}
+          <div className="w-full h-full relative">
+            <img
+              src={women}
+              alt="women with pimple patches"
+              className="w-full h-full md:object-contain object-cover"
+              width={1024} 
+              height={1536} 
+              loading="eager"
+            />
+          </div>
 
+          {/* TEXT */}
+          <div className="absolute inset-0 md:inset-auto md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-6 md:p-8 z-20">
+            <motion.h1
+              className="text-xl sm:text-2xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Invisible Care, Visible Results
+            </motion.h1>
 
-        {/* TEXT */}
-        <div className="absolute inset-0 border  md:inset-auto md:bg-transparent  bg-stone-900/40  md:top-[35%] md:left-[40%] md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
-          <motion.h1
-          layout={false}
-            className="text-xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Invisible Care, Visible Results
-          </motion.h1>
-
-          <motion.p
-          layout={false}
-            className="text-sm md:text-xl font-extralight leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce
-            redness, protect active breakouts, and visibly speed up healing. Our patches combine 
-            clean hydrocolloid technology with effective actives — like tea tree, retinol, 
-            salicylic acid, centella, and more.
-          </motion.p>
+            <motion.p
+              className="text-sm sm:text-base md:text-xl font-extralight leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce
+              redness, protect active breakouts, and visibly speed up healing. Our patches combine 
+              clean hydrocolloid technology with effective actives — like tea tree, retinol, 
+              salicylic acid, centella, and more.
+            </motion.p>
+          </div>
         </div>
       </section>
 
