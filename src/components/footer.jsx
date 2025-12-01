@@ -7,16 +7,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
 
         {/* Logo & Brand Info */}
-        <div className="space-y-2 text-center md:text-left">
-          <h1 className="text-3xl font-bold">SpotCureX</h1>
-          <p className="text-gray-200 max-w-sm">
+        <div className="space-y-2  md:text-left">
+          <h1 className="text-2xl md:text-4xl font-bold text-center md:text-start">SpotCureX</h1>
+          <p className="text-stone-100 max-w-sm text-sm md:text-base">
             Gentle, fast-acting hydrocolloid patches infused with natural ingredients. 
             Calm your skin, prevent picking, and heal breakouts — all invisibly.
           </p>
         </div>
 
         {/* Social Links */}
-        <div className="flex gap-6 text-white text-2xl justify-center md:justify-start">
+        <div className="flex gap-4 text-white  text-base md:text-2xl justify-center md:justify-start">
           <a href="https://www.instagram.com/spotcurex?igsh=NzQ3MjhuYWI1bzds&utm_source=qr"  target="_blank" rel="noopener noreferrer" className="hover:opacity-70">
             <FaInstagram />
           </a>
@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="mt-8 text-center text-gray-300 text-sm">
+      <div className="mt-8 text-center text-stone-100 text-sm md:text-base">
         &copy; {new Date().getFullYear()} SpotCureX. All rights reserved.
       </div>
     </footer>

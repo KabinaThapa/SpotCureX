@@ -32,14 +32,14 @@ export default function CustomerStories() {
 
   return (
     <section
-      className="w-full bg-stone-300 py-16 px-6 text-[#004e7a] font-roboto"
+      className="w-full bg-stone-300 py-14 px-6 text-[#004e7a] font-roboto"
       aria-label="Customer Reviews"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold  mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold mb-1" >
           Real Stories. Real Skin. Real Confidence.
         </h2>
-        <p className=" text-lg md:text-xl mb-12">
+        <p className=" text-base md:text-xl mb-12">
           Hear from our happy users who experienced clearer skin overnight.
         </p>
       </div>
@@ -48,13 +48,13 @@ export default function CustomerStories() {
         {stories.map((item, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
+            className="p-6 bg-white rounded-sm shadow-md  hover:shadow-lg transition-all duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <p className=" leading-relaxed">{item.story}</p>
+            <p className=" text-sm md:text-base leading-relaxed">{item.story}</p>
             <p className="mt-4 font-semibold text-[#004e7a]">— {item.name}</p>
           </motion.div>
         ))}

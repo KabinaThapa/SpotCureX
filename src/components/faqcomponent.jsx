@@ -44,23 +44,23 @@ export default function FAQSection() {
   return (
     <section className="w-full bg-[#f8fafc] py-16 px-6 text-[#004e7a]" aria-label="Frequently Asked Questions font-roboto">
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold  mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold  mb-4">
           Frequently Asked Questions
         </h2>
-        <p className=" text-lg">
+        <p className=" text-base md:text-lg">
           Find answers to common questions about SpotCureX patches and how they work.
         </p>
       </div>
 
       <div className="max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+          <div key={index} className="bg-white rounded-sm shadow-md overflow-hidden border border-gray-100">
             <button
               onClick={() => toggleFAQ(index)}
               className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
             >
-              <span className="text-lg md:text-xl font-semibold text-[#004e7a]">{faq.question}</span>
-              <span className="text-2xl font-bold">{openIndex === index ? "-" : "+"}</span>
+              <span className="text-base md:text-xl font-semibold text-[#004e7a]">{faq.question}</span>
+              <span className="text-md md:text-2xl font-semibold">{openIndex === index ? "-" : "+"}</span>
             </button>
 
             <AnimatePresence>
@@ -71,7 +71,7 @@ export default function FAQSection() {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="px-6 pb-6 text-gray-700 leading-relaxed"
+                  className="px-6 pb-6 text-sm md:text-base leading-relaxed"
                 >
                   {faq.answer}
                 </motion.div>
