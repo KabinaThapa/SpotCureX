@@ -24,7 +24,7 @@ export default function LandingPage() {
           <img
             src={women}
             alt="women with pimple patches"
-            className="w-full h-full object-cover md:object-contain"
+            className="w-[900px] h-[850px] object-cover md:object-contain"
           />
         </div>
 

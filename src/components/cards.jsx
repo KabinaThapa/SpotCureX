@@ -1,4 +1,3 @@
-// src/components/MasonrySections.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -34,55 +33,52 @@ export default function MasonrySections() {
   ];
 
   return (
-    <div className="relative w-[90%] h-auto mx-auto mb-10 py-20 -mt-12 bg-stone-200">
+    <div className="relative w-full flex flex-col items-center py-16 bg-stone-200">
 
-      {/* SEO Title */}
-      <h2 className="text-4xl font-bold text-center text-[#004e7a] mb-6 ">
+      {/* TITLE */}
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#004e7a] text-center mb-6 px-4">
         Why SpotCureX Works
       </h2>
 
-      {/* SEO Paragraph */}
-      <p className="text-lg text-[#004e7a] leading-relaxed max-w-3xl mx-auto mb-12 px-4">
-        SpotCureX hydrocolloid acne patches are designed to reduce redness, calm irritated bumps, 
-        and protect active breakouts. Each patch is dermatologist-tested and made with clean ingredients,
-         helping your skin heal faster while remaining invisible. Perfect for whiteheads, hidden pimples,
-          and sensitive skin, these patches deliver visible results without disrupting your day-to-day life.
+      {/* DESCRIPTION */}
+      <p className="text-base sm:text-lg text-[#004e7a] leading-relaxed max-w-3xl text-center px-6 mb-12">
+        SpotCureX hydrocolloid acne patches are designed to reduce redness, calm irritated bumps,
+        and protect active breakouts. Each patch is dermatologist-tested and made with clean ingredients.
       </p>
 
-      {/* Masonry Container */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 w-[90%] mx-auto">
+      {/* RESPONSIVE MASONRY */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 w-[90%] sm:w-[85%] lg:w-[80%] mx-auto space-y-4">
+
         {cards.map((card, i) => (
           <motion.div
             key={i}
-            className={`break-inside-avoid bg-stone-100 p-6 text-[#004e7a] rounded-sm shadow-lg  flex flex-col justify-center`}
+            className="break-inside-avoid bg-stone-100 p-6 rounded-lg shadow-lg text-[#004e7a] flex flex-col justify-start"
             style={{ height: `${card.height}px` }}
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
           >
-            <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
-            <p className="text-lg leading-relaxed">
-              {card.desc}{" "}
-              {card.cta && card.link && (
-                <a
-                  href={card.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-[#004e7a] hover:text-blue-600 ml-1"
-                >
-                  {card.cta}
-                </a>
-              )}
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">{card.title}</h3>
+
+            <p className="text-sm sm:text-base leading-relaxed mb-2">
+              {card.desc}
             </p>
+
+            {card.cta && (
+              <a
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto text-[#004e7a] font-semibold hover:underline"
+              >
+                {card.cta}
+              </a>
+            )}
           </motion.div>
         ))}
       </div>
-
-      {/* Hidden SEO content */}
-      <p className="sr-only">
-        SpotCureX acne patches include hydrocolloid, tea tree, retinol, salicylic acid, centella, and other skincare actives. Suitable for face and body blemishes, these patches reduce redness, prevent picking, and support healing. Perfect for all skin types and everyday use.
-      </p>
     </div>
   );
 }
