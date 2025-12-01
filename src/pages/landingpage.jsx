@@ -1,38 +1,39 @@
-// src/pages/LandingPage.jsx
-import React from "react";
-import { motion } from "framer-motion";
-import women from "../assets/women.png";
-import Navbar from "../components/navbar";
-import Cards from "../components/cards";
-import AboutComponent from "../components/aboutcomponent";
-import ProductsComponents from "../components/productscomponent";
-import Reviews from "../components/reviews";
-import Faq from "../components/faqcomponent";
-import Footer from "../components/footer";
+import React from 'react';
+import { motion } from 'framer-motion';
+import women from '../assets/women.png';
+import Cards from '../components/cards';
+import AboutComponent from '../components/aboutcomponent';
+import ProductsComponents from '../components/productscomponent';
+import Reviews from '../components/reviews';
+import Navbar from '../components/navbar';
+import Faq from '../components/faqcomponent';
+import Footer from '../components/footer';
+
 
 export default function LandingPage() {
   return (
-    <div className="w-full h-auto flex flex-col justify-between items-center bg-stone-200 font-roboto">
-
-      {/* Navbar */}
-      <div className="w-full">
+    <div className="bg-stone-200 font-roboto w-full flex flex-col items-center">
+      {/* NAVBAR */}
+      <div className="w-full absolute top-0 z-50">
         <Navbar />
       </div>
 
-      {/* Hero Section */}
-      <div className="w-full relative flex flex-col md:flex-row items-center bg-stone-500">
+      {/* HERO SECTION */}
+      <section className="w-full relative flex bg-stone-500 h-screen">
+        {/* Static dark overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-stone-900 opacity-50"></div>
 
-        {/* Left Image - Static */}
-        <div className="w-full md:w-1/2 min-h-[600px] relative">
-          <img 
-            src={women} 
-            alt="women with pimple patches" 
-            className="w-full h-full object-cover"
+        {/* IMAGE */}
+        <div className="w-1/2 h-full">
+          <img
+            src={women}
+            alt="women with pimple patches"
+            className="w-full h-full object-contain"
           />
         </div>
 
-        {/* Right Text - Animated */}
-        <div className="w-full md:w-1/2 p-8 text-white flex flex-col justify-center">
+        {/* TEXT */}
+        <div className="w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white p-4 backdrop-blur-lg">
           <motion.h1
             className="text-5xl mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -45,39 +46,43 @@ export default function LandingPage() {
             className="text-xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce redness, protect active breakouts, and visibly speed up healing. Our patches combine clean hydrocolloid technology with effective actives — like tea tree, retinol, salicylic acid, centella, and more — to support every stage of your skin’s healing journey. Invisible on the skin, powerful on blemishes, and gentle for everyday use.
           </motion.h2>
         </div>
-      </div>
+      </section>
 
-      {/* Cards Section */}
-      <div className="w-full bg-stone-500">
+      {/* Why SpotCureX Works Section (Masonry Cards) */}
+     
+
+      {/* CARDS SECTION */}
+      <div className="w-full bg-stone-500 relative">
+        <div className="absolute w-full h-[1137px] bg-stone-900 opacity-50 backdrop-blur-3xl"></div>
         <Cards />
       </div>
 
-      {/* About Section */}
+      {/* ABOUT SECTION */}
       <div className="w-full">
         <AboutComponent />
       </div>
 
-      {/* Products Section */}
+      {/* PRODUCTS SECTION */}
       <div className="w-full">
         <ProductsComponents />
       </div>
 
-      {/* Reviews Section */}
+      {/* REVIEWS */}
       <div className="w-full">
         <Reviews />
       </div>
 
-      {/* FAQ Section */}
+      {/* FAQ */}
       <div className="w-full">
         <Faq />
       </div>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <div className="w-full">
         <Footer />
       </div>
