@@ -10,31 +10,29 @@ import Footer from '../components/footer';
 
 export default function LandingPage() {
   return (
-    <div className="bgbox w-full h-auto flex flex-col justify-between items-center bg-stone-200 font-roboto">
+    <div className="bgbox w-full flex flex-col justify-between items-center bg-stone-200 font-roboto">
 
       {/* NAVBAR */}
-      <div className='absolute w-full z-20'>
+      <div className="absolute w-full z-20">
         <Navbar />
       </div>
 
       {/* HERO SECTION */}
-      <div className="Header w-full flex relative bg-stone-500 h-screen">
+      <section className="relative w-full h-screen flex bg-stone-500">
 
-        {/* Background overlay */}
-        <div className='bg-stone-900 backdrop-blur-3xl opacity-50 absolute top-0 left-0 w-full h-full z-0'></div>
-
-        {/* Left image */}
+        {/* IMAGE LEFT */}
         <div className="w-1/2 h-full relative overflow-hidden">
           <img
             src={women}
-            alt='women with pimple patches'
-            className='absolute top-0 left-0 w-full h-full object-cover'
-            style={{ willChange: 'transform' }}
+            alt="women with pimple patches"
+            className="w-full h-full object-cover"
           />
+          {/* DARK OVERLAY */}
+          <div className="absolute top-0 left-0 w-full h-full bg-stone-900 opacity-50"></div>
         </div>
 
-        {/* Right text */}
-        <div className="w-1/2 h-full absolute top-1/2 left-[38%] transform -translate-y-1/2 flex flex-col justify-center p-4 backdrop-blur-lg text-white z-10">
+        {/* TEXT RIGHT */}
+        <div className="w-1/2 h-full relative flex flex-col justify-center p-8 z-20 text-white">
           <motion.h1
             className="text-5xl mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +47,7 @@ export default function LandingPage() {
           </h2>
         </div>
 
-      </div>
+      </section>
 
       {/* CARDS SECTION */}
       <div className="h-auto w-full bg-stone-500 relative">
