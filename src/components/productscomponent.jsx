@@ -113,7 +113,7 @@ export default function ProductsComponents() {
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-96 object-cover object-center border-b"
+                  className="w-full h-[500px] object-cover object-center border-b"
                 />
                 <div className="p-4 h-auto md:h-44 bg-white">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
