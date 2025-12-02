@@ -17,14 +17,14 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full bg-stone-600 relative flex items-center md:h-screen ">
+      <section className="w-full bg-stone-700 relative flex items-center lg:h-screen ">
 
         {/* FULL HERO DARK OVERLAY */}
-        <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
+        <div className="absolute inset-0 bg-stone-800/40 pointer-events-none z-10"></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-full  overflow-hidden border bg-amber-400" >
-          <div className="w-ful relative border" style={{ aspectRatio: "1024/1536" }}>
+        <div className="md:w-1/2 w-full bg-stone-600 overflow-hidden" >
+          <div className="w-full relative " style={{ aspectRatio: "1024/1536" }}>
             <img
               src={women}
               alt="women with pimple patches"
@@ -36,7 +36,7 @@ export default function LandingPage() {
         </div>
 
         {/* TEXT */}
-        <div className="absolute z-20 md:top-1/3 md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
+        <div className="absolute z-20 md:top-[45%] md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
             layout={false}
             className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight"
