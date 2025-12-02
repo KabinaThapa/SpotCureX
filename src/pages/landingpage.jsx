@@ -17,13 +17,13 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full relative flex items-center bg-stone-600">
+      <section className="w-full relative flex items-center bg-stone-600 md:h-screen">
 
         {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-full flex items-center justify-center z-0 overflow-hidden">
+        <div className="w-full md:w-1/2 flex items-center justify-center z-0">
           <img
             src={women}
             alt="women with pimple patches"
@@ -37,7 +37,7 @@ export default function LandingPage() {
         <div className="absolute z-20 md:top-[45%] md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
             layout={false}
-            className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-4 leading-tight"
+            className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
