@@ -20,10 +20,10 @@ export default function LandingPage() {
       <section className="w-full relative flex items-center h-screen max-h-screen bg-stone-600">
 
         {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10 border "></div>
+        <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10 border h-screen"></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-full h-full md:h-screen flex items-center justify-center overflow-hidden border">
+        <div className="md:w-1/2 w-full flex items-center justify-center overflow-hidden border">
           <div className="w-full h-full  relative" style={{ aspectRatio: "1024/1536" }}>
             <img
               src={women}
