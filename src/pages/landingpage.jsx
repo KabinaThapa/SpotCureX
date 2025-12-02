@@ -17,9 +17,9 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full bg-stone-600 relative flex items-center">
+      <section className="w-full relative flex items-center h-screen max-h-screen bg-stone-600">
 
-        {/* FULL HERO DARK OVERLAY */}
+        {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
 
         {/* IMAGE */}
@@ -36,7 +36,7 @@ export default function LandingPage() {
         </div>
 
         {/* TEXT */}
-        <div className="absolute z-20 md:top-1/3 md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
+        <div className="absolute z-20 md:top-[45%] md:left-[65%] md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-1/2 flex flex-col justify-center text-white p-8 pt-28">
           <motion.h1
             layout={false}
             className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-4 leading-tight"
