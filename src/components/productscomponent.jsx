@@ -98,17 +98,20 @@ export default function ProductsComponents() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-md shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition duration-300  "
               >
+              
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-96 object-cover"
+                  className="w-full sm:h-96 md:h-[300px] lg:h-[400px] object-center object-cover"
                 />
-                <div className="p-4">
+                 <div className="h-40 p-4">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
                   <p className="text-sm leading-relaxed">{item.desc}</p>
+                
                 </div>
+               
               </div>
             ))}
 
