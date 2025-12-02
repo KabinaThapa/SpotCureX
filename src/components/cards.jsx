@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function MasonrySections() {
   return (
-    <div className="relative border w-full flex flex-col items-center py-16 bg-stone-200">
+    <div className="relative  w-full flex flex-col items-center py-16 bg-stone-200">
 
       {/* TITLE */}
       <h2 className="text-2xl md:text-4xl font-bold text-[#004e7a] mb-4 px-4 text-center">

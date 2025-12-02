@@ -17,18 +17,18 @@ export default function LandingPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="w-full relative flex items-center h-screen max-h-screen bg-stone-600">
+      <section className="w-full relative flex items-center h-full md:max-h-screen bg-stone-600">
 
         {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
 
         {/* IMAGE */}
         <div className="md:w-1/2 w-full flex items-center justify-center overflow-hidden">
-          <div className="w-full h-full relative" style={{ aspectRatio: "1024/1536" }}>
+          <div className="w-full h-full md:h-full relative flex items-center justify-center">
             <img
               src={women}
               alt="women with pimple patches"
-              className="absolute top-0 left-0 w-full h-full object-contain"
+              className="w-full h-auto md:h-full object-contain"
               loading="eager"
               draggable={false}
             />
