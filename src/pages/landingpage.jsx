@@ -23,8 +23,8 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-stone-900/40 pointer-events-none z-10"></div>
 
         {/* IMAGE */}
-        <div className="md:w-1/2 w-full overflow-hidden border" >
-          <div className="w-full h-full relative border" style={{ aspectRatio: "1024/1536" }}>
+        <div className="md:w-1/2 w-full  overflow-hidden border" >
+          <div className="w-full h-screen relative border" style={{ aspectRatio: "1024/1536" }}>
             <img
               src={women}
               alt="women with pimple patches"
