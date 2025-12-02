@@ -24,13 +24,15 @@ export default function LandingPage() {
 
         {/* IMAGE */}
         <div className="w-full md:w-1/2 flex items-center justify-center z-0">
-          <img
-            src={women}
-            alt="women with pimple patches"
-            className="w-full h-auto md:h-screen object-contain"
-            loading="eager"
-            draggable={false}
-          />
+          <div className="w-full relative">
+            <img
+              src={women}
+              alt="women with pimple patches"
+              className="w-full h-auto md:h-screen object-contain"
+              loading="eager"
+              draggable={false}
+            />
+          </div>
         </div>
 
         {/* TEXT */}
