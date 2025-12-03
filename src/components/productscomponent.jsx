@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import teatreepatch from '../assets/teatreepatch.png';
-import retinolpatch from '../assets/retinolpatch.png';
-import salicylicpatch from '../assets/salicylicpatch.png';
-import niacinamidepatch from '../assets/niacinamidepatch.png';
-import centellapatch from '../assets/centellapatch.png';
+import teatreepatch from '../assets/teatreee.png';
+import retinolpatch from '../assets/retinol.png';
+import salicylicpatch from '../assets/salicylic.png';
+import niacinamidepatch from '../assets/niacinamide.png';
+import centellapatch from '../assets/centella.png';
 
 export default function ProductsComponents() {
   return (
@@ -61,6 +61,19 @@ export default function ProductsComponents() {
               <li>Safe for sensitive skin</li>
             </ul>
           </div>
+
+          {/* ⭐ BUY ON AMAZON BUTTON (ADDED) */}
+          <div className="pt-4">
+            <a
+              href="https://www.amazon.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#004e7a] text-white px-6 py-3 rounded-md shadow-md 
+                         hover:bg-[#003d60] transition duration-300 text-sm md:text-base"
+            >
+              Shop Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -98,20 +111,17 @@ export default function ProductsComponents() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition duration-300  "
+                className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition duration-300"
               >
-              
                 <img
                   src={item.img}
                   alt={item.name}
                   className="w-full sm:h-96 md:h-[300px] lg:h-[400px] object-center object-cover"
                 />
-                 <div className="h-40 p-4">
+                <div className="h-40 p-4">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
                   <p className="text-sm leading-relaxed">{item.desc}</p>
-                
                 </div>
-               
               </div>
             ))}
 
