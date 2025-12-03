@@ -2,38 +2,39 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FAQSection() {
-  const faqs = [
-    {
-      question: "How do SpotCureX patches work?",
-      answer:
-        "Our hydrocolloid patches absorb excess oil, pus, and impurities from pimples while creating a moist healing environment. Combined with tea tree or other active ingredients, they help your skin heal faster and calmer.",
-    },
-    {
-      question: "Can I wear the patches during the day?",
-      answer:
-        "Yes! The patches are ultra-thin, transparent, and invisible on the skin. You can wear them while working, attending classes, or even applying light makeup over them.",
-    },
-    {
-      question: "Are SpotCureX patches safe for sensitive skin?",
-      answer:
-        "Absolutely. Our patches are dermatologically tested, fragrance-free, and safe for sensitive skin. Ingredients are clean and gentle.",
-    },
-    {
-      question: "How long should I leave the patch on?",
-      answer:
-        "For best results, keep the patch on overnight or for at least 6–8 hours. The patch will absorb impurities and flatten the pimple during this time.",
-    },
-    {
-      question: "Can I use multiple patches at once?",
-      answer:
-        "Yes. You can use multiple patches on different spots, just make sure each patch adheres well to clean, dry skin.",
-    },
-    {
-      question: "Do the patches leave a mark after removal?",
-      answer:
-        "No, the patches are gentle and should not leave marks. They may, however, remove impurities from the pimple itself, which is a normal part of healing.",
-    },
-  ];
+ const faqs = [
+  {
+    question: "How do SpotCureX patches work?",
+    answer:
+      "SpotCureX hydrocolloid acne patches absorb excess oil, pus, and bacteria from pimples while protecting the area from dirt and picking. The hydrocolloid creates a moist healing environment that speeds up recovery. Our Tea Tree formula adds natural antibacterial benefits to reduce redness and calm inflamed skin for faster results."
+  },
+  {
+    question: "Can I wear the patches during the day?",
+    answer:
+      "Yes. SpotCureX patches are ultra-thin, transparent, and designed to blend seamlessly with your skin. They stay on comfortably throughout the day and can even be worn under makeup. Many users wear them at work, school, or while running errands."
+  },
+  {
+    question: "Are SpotCureX patches safe for sensitive skin?",
+    answer:
+      "Absolutely. Our pimple patches are dermatologist-tested, fragrance-free, and suitable for sensitive skin types. We avoid harsh chemicals and only use clean, gentle ingredients, making them safe for daily use on acne-prone or reactive skin."
+  },
+  {
+    question: "How long should I leave the patch on?",
+    answer:
+      "For best results, leave the patch on overnight or for at least 6–8 hours. During this time, the hydrocolloid draws out impurities and flattens the pimple. You’ll know it worked when the patch turns white from absorbed fluid."
+  },
+  {
+    question: "Can I use multiple patches at once?",
+    answer:
+      "Yes, you can apply multiple patches on different breakouts at the same time. Just make sure your skin is clean and dry before applying so each patch sticks properly and delivers maximum absorption."
+  },
+  {
+    question: "Do the patches leave marks after removal?",
+    answer:
+      "No. SpotCureX patches are gentle, non-irritating, and designed to peel off smoothly without leaving marks. They may lift out impurities from the breakout, which is normal and part of the healing process. They also help prevent dark spots by reducing picking."
+  }
+];
+
 
   const [openIndex, setOpenIndex] = useState(null);
 

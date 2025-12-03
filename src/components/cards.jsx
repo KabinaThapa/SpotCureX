@@ -12,8 +12,9 @@ export default function MasonrySections() {
 
       {/* DESCRIPTION */}
       <p className="text-sm md:text-lg text-[#004e7a] leading-relaxed max-w-3xl px-6 mb-12 text-center">
-        SpotCureX hydrocolloid acne patches are designed to reduce redness, calm irritated bumps,
-        and protect active breakouts. Each patch is dermatologist-tested and made with clean ingredients.
+        SpotCureX hydrocolloid patches are created with medical-grade hydrocolloid, the same material used in professional wound
+         care. This makes our patches highly absorbent, gentle,
+         and incredibly effective at pulling out impurities while preventing skin picking — a major cause of acne scarring.
       </p>
 
       {/* GRID CONTAINER */}

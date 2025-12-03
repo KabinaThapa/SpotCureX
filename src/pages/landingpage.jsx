@@ -54,10 +54,12 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            SpotCureX creates dermatologist-tested hydrocolloid acne patches designed to reduce
-            redness, protect active breakouts, and visibly speed up healing. Our patches combine 
-            clean hydrocolloid technology with effective actives — like tea tree, retinol, 
-            salicylic acid, centella, and more.
+            SpotCureX creates dermatologist-tested hydrocolloid acne patches that help flatten pimples overnight, 
+            reduce redness, and protect active breakouts from bacteria. 
+            Our thin, invisible pimple patches blend into the skin while absorbing excess oil, pus, and impurities — 
+            giving you clearer, calmer skin without irritation.Made with safe, science-backed ingredients like Tea Tree, 
+            Retinol, Salicylic Acid, Centella Asiatica, and Niacinamide, our patches support faster healing for whiteheads,
+             red bumps, hormonal acne, and stubborn breakouts.
           </motion.p>
         </div>
       </section>

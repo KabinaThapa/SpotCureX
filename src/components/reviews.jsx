@@ -2,33 +2,34 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function CustomerStories() {
-  const stories = [
+   const stories = [
     {
       name: "Alex, 21",
       story:
-        "For years I felt embarrassed waking up with sudden breakouts before events. SpotCureX patches became my emergency fix — they calm my skin overnight and help me feel confident again.",
+        "I struggled with sudden whiteheads before events and it always ruined my confidence. After trying SpotCureX hydrocolloid acne patches, I finally found something that works overnight. They reduce redness, flatten pimples fast, and help my skin look clear in the morning."
     },
     {
       name: "Danny, 27",
       story:
-        "I work long hours and stress causes hormonal acne. These patches healed my inflamed bumps faster than anything I've tried. Now it’s part of my night routine.",
+        "Stress from long work hours always triggered breakouts for me. These SpotCureX pimple patches calm inflammation within hours and speed up healing. They’ve become my go-to solution for hormonal acne and irritated bumps."
     },
     {
       name: "Curtis, 24",
       story:
-        "I love wearing makeup, but constant pimples made it hard. SpotCureX helped flatten spots so quickly I finally stopped picking my skin.",
+        "Makeup never sat well on top of acne and it made me insecure. SpotCureX patches helped shrink my pimples so quickly that I stopped picking my skin. They protect the breakout, heal it faster, and blend perfectly under makeup."
     },
     {
       name: "Sofia, 19",
       story:
-        "The patch blends so well that I even wear it to classes. It actually prevents me from touching my face, which changed EVERYTHING for my skin.",
+        "These are the only acne patches I feel comfortable wearing in public. They're thin, invisible, and prevent me from touching my face during classes. My skin cleared up so much just from using SpotCureX consistently."
     },
     {
       name: "Nancy, 29",
       story:
-        "After trying expensive serums, I didn’t expect something so simple to work. Now I always keep a pack in my bag.",
-    },
+        "I spent so much money on expensive serums that barely helped my breakouts. SpotCureX hydrocolloid patches gave me real results—reduced swelling, less redness, and faster healing. Now I always keep them in my bag."
+    }
   ];
+
 
   return (
     <section
